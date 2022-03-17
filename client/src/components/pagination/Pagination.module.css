@@ -1,0 +1,32 @@
+.paginationGroup {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  background-color: #383838;
+  width: 50%;
+  margin: auto;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.paginationElement {
+  width: 100%;
+}
+
+.paginationButton {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease all;
+  border: 1px solid transparent;
+  background-color: #383838;
+  border-radius: 3px;
+}
+.paginationButton:hover {
+  color: orange;
+  background-color: #484747;
+  border: 1px solid orange;
+}

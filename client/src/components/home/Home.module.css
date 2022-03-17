@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
+
+.navBar {
+  background-color: #383838;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.homeTitle {
+  color: orange;
+  font-weight: 300;
+  margin-left: 2.5rem;
+}
+
+.homeLink {
+  text-decoration: none;
+}
+
+.aboutButton {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.navReload {
+  height: 43px;
+  background-color: #2e2e2e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  padding: 0 20px 0 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  margin-right: 1rem;
+}
+.navReload:hover {
+  background-color: rgb(65, 65, 65);
+  border: 1px solid orange;
+}
+
+.createPosition {
+  margin-right: 1rem;
+}
+
+.navButton {
+  background-color: #2e2e2e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.navButton:hover {
+  background-color: rgb(65, 65, 65);
+  border: 1px solid orange;
+}
+
+.filtersGroup {
+  background-color: #383838;
+  margin: auto;
+  width: 70%;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filtersText {
+  margin: 0;
+  color: orange;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+.selectsGroup {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.selectName {
+  width: 100%;
+  margin-right: 1rem;
+  padding: 0.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-color: #383838;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+.selectName:focus {
+  outline: none;
+}
+.selectName:hover {
+  border: 1px solid orange;
+}
+
+.selectPoints {
+  width: 100%;
+  margin-right: 1rem;
+  padding: 0.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-color: #383838;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+.selectPoints:focus {
+  outline: none;
+}
+.selectPoints:hover {
+  border: 1px solid orange;
+}
+
+.selectDiets {
+  width: 100%;
+  margin-right: 1rem;
+  padding: 0.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-color: #383838;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+.selectDiets:focus {
+  outline: none;
+}
+.selectDiets:hover {
+  border: 1px solid orange;
+}
+
+.selectCreated {
+  width: 100%;
+  padding: 0.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-color: #383838;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+.selectCreated:focus {
+  outline: none;
+}
+.selectCreated:hover {
+  border: 1px solid orange;
+}
+
+.cardGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #383838;
+  width: 80%;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.notFound {
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 4rem;
+}
+
+.loading {
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 4rem;
+}
+
+@media all and (max-width: 1000px) {
+  .cardGroup {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .selectsGroup {
+    flex-direction: column;
+  }
+  .navBar {
+    flex-direction: column;
+  }
+  .aboutButton {
+    margin: 1rem 0 1rem 0;
+  }
+
+  .navReload {
+    margin: 0 0 1rem 0;
+  }
+  .createPosition {
+    margin: 0 0 1rem 0;
+  }
+  .cardGroup {
+    grid-template-columns: 1fr;
+  }
+}

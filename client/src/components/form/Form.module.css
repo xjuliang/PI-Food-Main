@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: #383838;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: orange;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.headerGroup {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.headerGroup h1{
+  font-weight: 300;
+}
+
+.headerButton {
+  margin-left: auto;
+  margin-right: 55px;
+}
+
+.headerButtonStyles {
+  background-color: #2e2e2e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.headerButtonStyles:hover {
+  background-color: rgb(65, 65, 65);
+  border: 1px solid orange;
+}
+
+.smallElements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20;
+  
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inputPosition {
+  text-align: left;
+}
+
+.labelForm {
+  display: block;
+  font-size: 20px;
+  padding: 5px;
+  min-height: 30px;
+  margin-top: 15px;
+}
+
+.inputGroup {
+  position: relative;
+  z-index: 90;
+  
+}
+
+.inputForm {
+  width: 85%;
+  background: #fff;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.4s ease all;
+  border: 2px solid transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.inputForm:focus {
+  border: 2px solid orange;
+  outline: none;
+}
+
+.inputErrorText {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 2px 0 25px 2px;
+  color: #ff3131;
+  padding: 0 0 0 2px;
+}
+
+.inputCheckIcon {
+  height: 20px;
+  position: absolute;
+  right: 60px;
+  bottom: 12px;
+  z-index: 100;
+  opacity: 0;
+}
+
+.rangeContainer {
+  display: flex;
+  padding: 0 0px 0 10px;
+  background-color: #2e2e2e;
+  border-radius: 5px;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.rangeInput {
+  margin: 0px 10px 0px 0px;
+  background-color: #2e2e2e;
+  cursor: pointer;
+  accent-color: orange;
+}
+
+.rangeNumber {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.imagePreview {
+  height: auto;
+  width: 80%;
+  border: 2px solid rgb(46, 46, 46);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.checkboxGroup {
+  background-color: #2e2e2e;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  border-radius: 5px;
+  padding: 30px 10px;
+  margin: 5px 15px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.checkboxElement {
+  text-align: left;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.checkboxLabel {
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease all;
+  padding: 10px 20px;
+  color: #fff;
+}
+.checkboxLabel:hover {
+  background-color: #3a3a3a;
+}
+
+.checkboxInput {
+  margin-right: 8px;
+  accent-color: orange;
+}
+
+.stepsBox {
+  background-color: #2e2e2e;
+  display: flex;
+  border-radius: 5px;
+  padding: 15px 10px;
+  margin: 5px 15px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.stepsCreate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.stepInput {
+  height: 30px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+  border: 2px solid transparent;
+  font-family: "Poppins", sans-serif;
+}
+.stepInput:focus {
+  border: 2px solid orange;
+  outline: none;
+}
+
+.stepButton {
+  margin: 10px 100px 100px 0;
+  padding: 8px;
+  background-color: rgb(34, 34, 34);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease all;
+  border-radius: 5px;
+}
+.stepButton:hover {
+  background-color: rgb(80, 80, 80);
+}
+
+.stepsErrorText {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff3131;
+  padding: 30px;
+}
+
+.stepsList {
+  padding: 10px;
+}
+
+.stepText {
+  text-align: left;
+  color: #fff;
+}
+
+.stepDelete {
+  margin-left: 10px;
+  width: 20px;
+  text-align: center;
+  padding: 5px;
+  background-color: orange;
+  color: black;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.stepDelete:hover {
+  background-color: black;
+  color: orange;
+}
+
+.warningGroup {
+  display: flex;
+  justify-content: center;
+  background-color: #ff3131;
+  border-radius: 5px;
+  width: 380px;
+  margin: 0 auto;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.warningText {
+  font-size: 17px;
+  padding: 0 5px;
+  color: #fff;
+}
+
+.submitButton {
+  background-color: #2e2e2e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  margin-top: 35px;
+  padding: 15px 30px 15px 30px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.submitButton:hover {
+  background-color: rgb(65, 65, 65);
+  border: 1px solid orange;
+}
+
+@media all and (max-width: 800px) {
+  .smallElements{
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,42 @@
+.searchGroup {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.searchInput {
+  width: 60%;
+  background: #fff;
+  border-radius: 5px 0 0 5px;
+  height: 40px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.4s ease all;
+  border: 2px solid transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.searchInput:focus {
+  outline: none;
+}
+
+.searchButton {
+  width:30%;
+  background-color: #2e2e2e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  padding: 10px 20px 10px 20px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.searchButton:hover {
+  background-color: rgb(65, 65, 65);
+  border: 1px solid orange;
+}
+

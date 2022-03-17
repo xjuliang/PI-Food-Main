@@ -1,0 +1,172 @@
+.detailContainer {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: #383838;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.headerGroup {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+
+.headerGroup h1 {
+  color: orange;
+  font-weight: 300;
+  margin-left: 1.5rem;
+  text-align: left;
+}
+
+.headerButton {
+  margin-left: auto;
+  margin-right: 0.3rem;
+}
+
+.headerButtonDb {
+  background-color: #2e2e2e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  margin-right: 1rem;
+}
+
+.headerButtonDb:hover {
+  background-color: rgb(65, 65, 65);
+  border: 1px solid orange;
+}
+
+.headerButtonStyles {
+  background-color: #2e2e2e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.headerButtonStyles:hover {
+  background-color: rgb(65, 65, 65);
+  border: 1px solid orange;
+}
+
+.firstContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.imgContainer {
+  margin: 1rem;
+  max-width: 50%;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+  opacity: 0.8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.imgContainer:hover {
+  transform: scale(1.02);
+}
+
+.pointsContainer {
+  margin: 1rem;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  padding: 1.5rem;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.pointsContainer:hover {
+  background-color: #353535;
+  border: 1px solid orange;
+}
+
+.pointsText {
+  margin: 0;
+  color: orange;
+}
+
+.dietsContainer {
+  padding: none;
+}
+
+.dietsList {
+  padding: 0;
+  margin: 0;
+}
+
+.dietsTitle {
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.dietsText {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.infoContainer {
+  background-color: #2e2e2e;
+  padding: 0.1rem 2rem;
+  margin-top: 1rem;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.infoContainer:hover {
+  background-color: #353535;
+  border: 1px solid orange;
+}
+
+.infoTitle {
+  text-align: left;
+  color: orange;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.descriptionText {
+  margin: 0.4rem 0.2rem;
+  text-align: justify;
+}
+
+.stepsContainer {
+  text-align: justify;
+  margin: 0.5rem 0 0 1.1rem;
+  padding: 0;
+}
+
+.stepsText {
+  margin: 0.5rem 0;
+  color: #fff;
+}
