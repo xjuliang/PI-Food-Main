@@ -1,30 +1,45 @@
-const axios = require("axios");
-const { Recipe, Diet } = require("../db.js");
-const { APIKEY } = process.env;
+// const axios = require("axios");
+const { Recipe, Diet, RecipeAPI } = require("../db.js");
+// const { APIKEY } = process.env;
 
 const getApiInfo = async () => {
-  const apiUrl = await axios.get(
-    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKEY}&addRecipeInformation=true&number=100`
-  );
-  const apiInfo = await apiUrl.data?.results.map((e) => {
-    return {
-      id: e.id,
-      title: e.title,
-      summary: e.summary,
-      spoonacularScore: e.spoonacularScore,
-      healthScore: e.healthScore,
-      image: e.image,
-      diets: e.diets.map((e) => {
-        return { name: e };
-      }),
-      steps: e.analyzedInstructions[0]?.steps.map((e) => {
-        return e.step;
-      }),
-      dishTypes: e.dishTypes.map((e) => {
-        return { name: e };
-      }),
-    };
-  });
+
+  // const apiUrl = await axios.get(
+  //   `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKEY}&addRecipeInformation=true&number=100`
+  // );
+  // const apiInfo = await apiUrl.data?.results.map((e) => {
+  //   return {
+  //     id: e.id,
+  //     title: e.title,
+  //     summary: e.summary,
+  //     spoonacularScore: e.spoonacularScore,
+  //     healthScore: e.healthScore,
+  //     image: e.image,
+  //     diets: e.diets,
+  //     steps: e.analyzedInstructions[0]?.steps.map((e) => {
+  //       return e.step;
+  //     }),
+  //   };
+  // });
+  // await apiInfo.forEach((e) => {
+  //   RecipeAPI.findOrCreate({
+  //     where: {
+  //       id: e.id,
+  //     },
+  //     defaults: {
+  //       id: e.id,
+  //       title: e.title,
+  //       summary: e.summary,
+  //       spoonacularScore: e.spoonacularScore,
+  //       healthScore: e.healthScore,
+  //       image: e.image,
+  //       diets: e.diets,
+  //       steps: e.steps,
+  //     },
+  //   });
+  // });
+
+  const apiInfo = await await RecipeAPI.findAll();
   return apiInfo;
 };
 
@@ -44,6 +59,7 @@ const getAllRecipes = async () => {
   const apiInfo = await getApiInfo();
   const dbInfo = await getDbInfo();
   const allInfo = apiInfo.concat(dbInfo);
+
   return allInfo;
 };
 
@@ -53,9 +69,16 @@ const getRecipesForDiet = async (diet) => {
     let check = false;
     if (recipe.diets) {
       recipe.diets.forEach((el) => {
-        if (el.name.toLowerCase().includes(diet.toLowerCase())) {
-          check = true;
+        if(recipe.createdInDb ){
+          if (el.name.toLowerCase().includes(diet.toLowerCase())) {
+            check = true;
+          }
+        } else{
+          if (el.toLowerCase().includes(diet.toLowerCase())) {
+            check = true;
+          }
         }
+        
       });
     }
     return check;

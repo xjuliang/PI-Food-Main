@@ -41,10 +41,19 @@ router.post("/recipe", async (req, res) => {
     steps,
     createdInDb,
   });
-  const dietsDb = await Diet.findAll({
-    where: { name: diets },
+  // console.log("INGRESADO"+diets)
+  // const dietsList = await diets.map((diet) => {
+  //    Diet.findAll({
+  //     where: { name: diet },
+  //   });
+  // });
+  // console.log(dietsList)
+
+  const dietsList = await Diet.findAll({
+    where: {name: diets },
   });
-  recipeCreated.addDiet(dietsDb);
+  
+  recipeCreated.addDiet(dietsList);
   res.send("Recipe created.");
 });
 

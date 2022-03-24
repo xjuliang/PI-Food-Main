@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getDetail, deleteDetail,deleteRecipe } from "../../actions";
+import { getDetail, deleteDetail, deleteRecipe } from "../../actions";
 import styles from "./Detail.module.css";
 
 export default function Detail() {
@@ -10,7 +10,7 @@ export default function Detail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(deleteDetail())
+    dispatch(deleteDetail());
     dispatch(getDetail(recipeId.id));
   }, [dispatch, recipeId.id]);
 
@@ -64,8 +64,8 @@ export default function Detail() {
               <p className={styles.dietsTitle}>Diets:</p>
               <ul className={styles.dietsList}>
                 {myRecipe[0].diets.map((el) => (
-                  <li className={styles.dietsText} key={el.name}>
-                    - {el.name}
+                  <li className={styles.dietsText} key={el}>
+                    - {myRecipe[0].createdInDb ? el.name : el}
                   </li>
                 ))}
               </ul>
@@ -82,14 +82,15 @@ export default function Detail() {
           <div className={styles.infoContainer}>
             <h3 className={styles.infoTitle}>Steps</h3>
             <ol className={styles.stepsContainer}>
-              {myRecipe[0].steps
-                ? myRecipe[0].steps.map((el) => (
-                    <li className={styles.stepsText} key={el}>
-                      {el}
-                    </li>
-                  ))
-                : <p>Not steps defined.</p>
-                  }
+              {myRecipe[0].steps ? (
+                myRecipe[0].steps.map((el) => (
+                  <li className={styles.stepsText} key={el}>
+                    {el}
+                  </li>
+                ))
+              ) : (
+                <p>Not steps defined.</p>
+              )}
             </ol>
           </div>
         </div>

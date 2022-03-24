@@ -134,7 +134,7 @@ export default function Home() {
               {currentRecipes?.map((e) => {
                 return (
                   <div key={e.id}>
-                    <Card id={e.id} title={e.title} image={e.image} diets={e.diets}/>
+                    <Card id={e.id} title={e.title} image={e.image} diets={e.diets} createdInDb={e.createdInDb}/>
                   </div>
                 );
               })}

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 
-export default function Card({ title, image, diets, id }) {
+export default function Card({ title, image, diets, id, createdInDb }) {
   return (
     <div className={styles.cardComponent}>
       <img src={image} alt="recipe" className={styles.cardImage} />
@@ -16,7 +16,7 @@ export default function Card({ title, image, diets, id }) {
               {diets.map((el) => {
                 return (
                   <p className={styles.dietTypesText} key={el.name}>
-                    - {el.name.toUpperCase()}
+                    - {createdInDb ? el.name.toUpperCase() : el.toUpperCase()}
                   </p>
                 );
               })}
