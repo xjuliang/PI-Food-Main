@@ -1,45 +1,45 @@
-const axios = require("axios");
+// const axios = require("axios");
 const { Recipe, Diet, RecipeAPI } = require("../db.js");
 // const { APIKEY } = process.env;
 
 const getApiInfo = async () => {
 
-  const apiUrl = await axios.get(
-    `https://api.spoonacular.com/recipes/complexSearch?apiKey=ca01b776ff2c4f4b861620d22d97b2fb&addRecipeInformation=true&number=100`
-  );
-  const apiInfo = await apiUrl.data?.results.map((e) => {
-    return {
-      id: e.id,
-      title: e.title,
-      summary: e.summary,
-      spoonacularScore: e.spoonacularScore,
-      healthScore: e.healthScore,
-      image: e.image,
-      diets: e.diets,
-      steps: e.analyzedInstructions[0]?.steps.map((e) => {
-        return e.step;
-      }),
-    };
-  });
-  await apiInfo.forEach((e) => {
-    RecipeAPI.findOrCreate({
-      where: {
-        id: e.id,
-      },
-      defaults: {
-        id: e.id,
-        title: e.title,
-        summary: e.summary,
-        spoonacularScore: e.spoonacularScore,
-        healthScore: e.healthScore,
-        image: e.image,
-        diets: e.diets,
-        steps: e.steps,
-      },
-    });
-  });
+  // const apiUrl = await axios.get(
+  //   `https://api.spoonacular.com/recipes/complexSearch?apiKey=ca01b776ff2c4f4b861620d22d97b2fb&addRecipeInformation=true&number=100`
+  // );
+  // const apiInfo = await apiUrl.data?.results.map((e) => {
+  //   return {
+  //     id: e.id,
+  //     title: e.title,
+  //     summary: e.summary,
+  //     spoonacularScore: e.spoonacularScore,
+  //     healthScore: e.healthScore,
+  //     image: e.image,
+  //     diets: e.diets,
+  //     steps: e.analyzedInstructions[0]?.steps.map((e) => {
+  //       return e.step;
+  //     }),
+  //   };
+  // });
+  // await apiInfo.forEach((e) => {
+  //   RecipeAPI.findOrCreate({
+  //     where: {
+  //       id: e.id,
+  //     },
+  //     defaults: {
+  //       id: e.id,
+  //       title: e.title,
+  //       summary: e.summary,
+  //       spoonacularScore: e.spoonacularScore,
+  //       healthScore: e.healthScore,
+  //       image: e.image,
+  //       diets: e.diets,
+  //       steps: e.steps,
+  //     },
+  //   });
+  // });
 
-  // const apiInfo = await await RecipeAPI.findAll();
+  const apiInfo = await await RecipeAPI.findAll();
   return apiInfo;
 };
 
