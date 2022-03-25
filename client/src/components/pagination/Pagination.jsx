@@ -12,7 +12,6 @@ export default function Paginado({ recipesPerPage, allRecipes, paginado }) {
     <div >
       <nav>
         <ul className={styles.paginationGroup}>
-        <button onClick={() => paginado(1)} className={styles.paginationButton}>First</button>
           {pageNumbers?.map((number) => {
             return (
               <li className={styles.paginationElement}  key={number}>
@@ -20,7 +19,6 @@ export default function Paginado({ recipesPerPage, allRecipes, paginado }) {
               </li>
             );
           })}
-          <button onClick={() => paginado(pageNumbers.length)} className={styles.paginationButton}>Last</button>
         </ul>
       </nav>
     </div>
