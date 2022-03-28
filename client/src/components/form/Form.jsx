@@ -302,6 +302,7 @@ export default function Form() {
                     onChange={(e) => handleChange(e)}
                     className={styles.inputForm}
                     placeholder="image URL"
+                    maxLength="254"
                   />
                 </div>
                 <p className={styles.inputErrorText}>{errors.image}</p>
